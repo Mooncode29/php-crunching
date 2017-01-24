@@ -1,7 +1,7 @@
 <?php
 $string = file_get_contents("dictionnaire.txt", FILE_USE_INCLUDE_PATH);
 $dico = explode("\n", $string);
-// echo "Le dictionnaire contient ".count($dico)." "."mots";
+echo "Le dictionnaire contient ".count($dico)." "."mots";
 $compteur = 0;
 foreach($dico as $value){
 	$wordLength = strlen($value);
