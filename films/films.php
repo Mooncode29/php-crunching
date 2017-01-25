@@ -4,12 +4,18 @@ $brut = json_decode($string, true);
 $top = $brut["feed"]["entry"];
 $films = $top[1]["im:name"]["label"];
 
-function searchRanking($liste, $film){
-	for($i=0; $i<= 100; $i++){
-		if($liste[$i]["im:name"]["label"] === $film){
-		return ($i+1);
+function searchRanking($film, $liste){
+	foreach($liste as $key => $value){
+		if($value["im:name"]["label"] === $film){
+			return ($key+1);
 		}
 	}
 }
-
+function searchDirector($director, $liste){
+	foreach ($liste as $key => $value) {
+		if($value["im:name"]["label"] === $director){
+			return($value["im:artist"]["label"]);
+		}
+	}
+}
 

@@ -16,7 +16,9 @@ require 'films.php';
 	<li><?= $i." ".$top[$i]["im:name"]["label"];?></li>
 <?php endfor; ?></ul>
 <h2>Question 2</h2>
-<?php echo "Gravity se trouve à la position "."\n". searchRanking($top, "Gravity");?>
+<?php echo "Gravity se trouve à la position "."\n". searchRanking("Gravity",$top);?>
+<h3>Question 3</h3>
+<?php echo searchDirector("The LEGO Movie",$top);?>
 
 </body>
 </html>
