@@ -25,7 +25,6 @@ echo " nb mots avec W : "." ".$count;
 // echo $lastString;
 $counter = 0;
 foreach ($dico as $value) {
-	// $findQ = "q";
 	$lastString = substr($value,-1);
 	if($lastString==="q"){
 		$counter++;
