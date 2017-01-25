@@ -19,3 +19,16 @@ foreach ($dico as $value){
 	}
 }
 echo " nb mots avec W : "." ".$count;
+
+// $tab=["monica","irène"];
+// $lastString = substr($tab[1], -1);
+// echo $lastString;
+$counter = 0;
+foreach ($dico as $value) {
+	// $findQ = "q";
+	$lastString = substr($value,-1);
+	if($lastString==="q"){
+		$counter++;
+	}
+}
+echo "\n"."nombre de mots finissant par q :"."\n".$counter;
